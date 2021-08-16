@@ -69,6 +69,14 @@ section{
   color: #003638;
 }
 
+.btn-loading{
+  background: #f3f2c9;
+  color: #003638;
+  cursor: none;
+  display: block;
+}
+
+
 .heading{
   text-align: center;
   margin: 0 6rem;
