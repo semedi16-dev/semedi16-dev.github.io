@@ -203,7 +203,7 @@
 					<textarea name="message" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
 					<button type="submit" class="btn btn-send"> send <i class="fas fa-paper-plane"></i> </button>
 
-					<button type="submit" class="btn btn-loading load" > loading <i class="fas fa-spinner fa-spin"></i> </button>
+					<button type="submit" class="btn btn-loading" > loading <i class="fas fa-spinner fa-spin"></i> </button>
 
 				</form>
 				
@@ -233,17 +233,13 @@
 			const btnKirim = document.querySelector('.btn-send');
 			const btnLoad = document.querySelector('.btn-loading');
 
-			
-			
+			btnKirim.addEventListener("click", function(){
+				btnKirim.style.display = "none";
+				btnLoad.style.display = "block";
+			});
 
 			form.addEventListener('submit', e => {
-				e.preventDefault()
-
-				btnKirim.addEventListener("click", function(){
-								btnKirim.style.display = "none";
-								btnLoad.style.display = "block";
-							});
-
+				e.preventDefault();
 
 				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 					.then(response => {
