@@ -1,11 +1,13 @@
 $(document).ready(function () {
-	$("#menu").click(function () {
-		$(this).toggleClass("fa-times");
+
+	$("#burger").click(function () {
+		$(this).toggleClass("toggle");
 		$("header").toggleClass("toggle");
 	});
 
 	$(window).on("scroll load", function () {
-		$("#menu").removeClass("fa-times");
+    
+		$("#burger").removeClass("toggle");
     $("header").removeClass("toggle");
     
     if ($(window).scrollTop() > 0) {
